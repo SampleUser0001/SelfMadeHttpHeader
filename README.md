@@ -16,7 +16,7 @@ npm start
 ### location=hogehoge
 
 ``` sh
-curl localhost:3000?location=%0d%0dhogehoge --head
+curl localhost:3000?location=hogehoge --head
 ```
 
 ``` sh
