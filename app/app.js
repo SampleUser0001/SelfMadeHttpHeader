@@ -6,9 +6,10 @@ const PORT = 3000
 const HTTP_STATUS = 200
 
 app.get('/',(req, res) => {
-  const location = req.query.location
+  // const location = req.query.location
   // console.log(req.query.location)
-  res.set('Location', location)
+  res.set('Location', req.query.location)
+  // res.set('Keep-Alive', req.query.keepalive)
   res.send('Hello World')
 })
 

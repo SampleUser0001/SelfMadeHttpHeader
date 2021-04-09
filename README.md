@@ -16,7 +16,7 @@ npm start
 ### location=hogehoge
 
 ``` sh
-curl localhost:3000?location=hogehoge --head
+curl localhost:3000?location=%0d%0dhogehoge --head
 ```
 
 ``` sh
@@ -38,6 +38,8 @@ curl http://localhost:3000?location=%0d%0d<script type=”text/javascript”>ale
 ```
 
 ヘッダの出力順によってはJavaScriptが実行される。
+
+HTTPリクエストヘッダとHTTPリクエストボディを分ける要素は改行なので、GETパラメータ等で取得した値をリクエストヘッダに設定するような実装をしていると、余計な改行＋JavaScriptを仕込まれる可能性があり、脆弱性につながる。
 
 ## 参考
 
